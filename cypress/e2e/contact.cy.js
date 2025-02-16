@@ -2,7 +2,7 @@
 
 describe('contact form', () => {
     it('should submit the form', () => {
-        cy.visit('http://127.0.0.1:5173/about');
+        cy.visit('http://localhost:5173/about');
         cy.get('[data-cy="contact-input-message"]').type('some text');
         cy.get('[data-cy="contact-input-name"]').type('Bruna');
 
@@ -21,7 +21,7 @@ describe('contact form', () => {
 
 describe('contact form', () => {
     it('should submit the form', () => {
-        cy.visit('http://127.0.0.1:5173/about');
+        cy.visit('http://localhost:5173/about');
         cy.get('[data-cy="contact-input-message"]').type('some text');
         cy.get('[data-cy="contact-input-name"]').type('Bruna');
 
@@ -37,9 +37,9 @@ describe('contact form', () => {
 
 
     it('should validate de the form input', () => {
-        cy.visit('http://127.0.0.1:5173/about');
+        cy.visit('http://localhost:5173/about');
         cy.get('[data-cy="contact-btn-submit"]').click();
-        cy.get('[data-cy="contact-btn-submit"]').contains('Sending Message');
+        cy.get('[data-cy="contact-btn-submit"]').contains('Send Message');
 
 
     })
