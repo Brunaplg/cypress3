@@ -1,7 +1,7 @@
 ///<reference types ="Cypress"/>
 
 describe('contact form', () => {
-    it('should submit the form', () => {
+    it('1 should submit the form', () => {
         cy.visit('http://localhost:5173/about');
         cy.get('[data-cy="contact-input-message"]').type('some text');
         cy.get('[data-cy="contact-input-name"]').type('Bruna');
@@ -20,7 +20,7 @@ describe('contact form', () => {
 
 
 describe('contact form', () => {
-    it('should submit the form', () => {
+    it('2 should fill out the form', () => {
         cy.visit('http://localhost:5173/about');
         cy.get('[data-cy="contact-input-message"]').type('some text');
         cy.get('[data-cy="contact-input-name"]').type('Bruna');
@@ -36,9 +36,9 @@ describe('contact form', () => {
     })
 
 
-    it('should validate de the form input', () => {
+    it('3 should validate de the form input', () => {
         cy.visit('http://localhost:5173/about');
         cy.get('[data-cy="contact-btn-submit"]').click();
-        cy.get('[data-cy="contact-btn-submit"]').contains('SendMessage');
+        cy.get('[data-cy="contact-btn-submit"]').contains('Send Message');
     })
 })
